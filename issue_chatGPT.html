@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="한국R사용자회">
+
+<title>챗GPT 뉴스</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="issue_chatGPT_files/libs/clipboard/clipboard.min.js"></script>
+<script src="issue_chatGPT_files/libs/quarto-html/quarto.js"></script>
+<script src="issue_chatGPT_files/libs/quarto-html/popper.min.js"></script>
+<script src="issue_chatGPT_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="issue_chatGPT_files/libs/quarto-html/anchor.min.js"></script>
+<link href="issue_chatGPT_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="issue_chatGPT_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="issue_chatGPT_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="issue_chatGPT_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="issue_chatGPT_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+<script src="issue_chatGPT_files/libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+<link href="issue_chatGPT_files/libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="issue_chatGPT_files/libs/datatables-binding-0.26/datatables.js"></script>
+<script src="issue_chatGPT_files/libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="issue_chatGPT_files/libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="issue_chatGPT_files/libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="issue_chatGPT_files/libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
+<link href="issue_chatGPT_files/libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="issue_chatGPT_files/libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">챗GPT 뉴스</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>한국R사용자회 </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-0cd652da56ed3bf76819" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0cd652da56ed3bf76819">{"x":{"filter":"none","vertical":false,"data":[["<a href='https://n.news.naver.com/mnews/article/032/0003204362?sid=101'>경향신문<\/a>","<a href='https://n.news.naver.com/mnews/article/005/0001586140?sid=110'>국민일보<\/a>","<a href='https://n.news.naver.com/mnews/article/079/0003736722?sid=105'>노컷뉴스<\/a>","<a href='https://n.news.naver.com/mnews/article/079/0003736723?sid=102'>노컷뉴스<\/a>","<a href='https://n.news.naver.com/mnews/article/079/0003736719?sid=100'>노컷뉴스<\/a>","<a href='https://n.news.naver.com/mnews/article/079/0003736708?sid=105'>노컷뉴스<\/a>","<a href='https://n.news.naver.com/mnews/article/021/0002556063?sid=104'>문화일보<\/a>","<a href='https://n.news.naver.com/mnews/article/021/0002556049?sid=101'>문화일보<\/a>","<a href='https://n.news.naver.com/mnews/article/081/0003338584?sid=105'>서울신문<\/a>","<a href='https://n.news.naver.com/mnews/article/023/0003745706?sid=104'>조선일보<\/a>","<a href='https://n.news.naver.com/mnews/article/025/0003259040?sid=100'>중앙일보<\/a>","<a href='https://n.news.naver.com/mnews/article/028/0002627018?sid=103'>한겨레<\/a>","<a href='https://n.news.naver.com/mnews/article/469/0000722878?sid=105'>한국일보<\/a>","<a href='https://n.news.naver.com/mnews/article/422/0000583686?sid=104'>연합뉴스TV<\/a>","<a href='https://n.news.naver.com/mnews/article/001/0013750908?sid=104'>연합뉴스<\/a>","<a href='https://n.news.naver.com/mnews/article/003/0011686919?sid=101'>뉴시스<\/a>","<a href='https://n.news.naver.com/mnews/article/003/0011686747?sid=105'>뉴시스<\/a>","<a href='https://n.news.naver.com/mnews/article/003/0011686825?sid=101'>뉴시스<\/a>","<a href='https://n.news.naver.com/mnews/article/421/0006625224?sid=101'>뉴스1<\/a>","<a href='https://n.news.naver.com/mnews/article/008/0004850011?sid=105'>머니투데이<\/a>","<a href='https://n.news.naver.com/mnews/article/008/0004850000?sid=105'>머니투데이<\/a>","<a href='https://n.news.naver.com/mnews/article/008/0004849980?sid=105'>머니투데이<\/a>","<a href='https://n.news.naver.com/mnews/article/008/0004850015?sid=105'>머니투데이<\/a>","<a href='https://n.news.naver.com/mnews/article/008/0004850007?sid=102'>머니투데이<\/a>","<a href='https://n.news.naver.com/mnews/article/008/0004850004?sid=105'>머니투데이<\/a>","<a href='https://n.news.naver.com/mnews/article/011/0004155228?sid=102'>서울경제<\/a>","<a href='https://n.news.naver.com/mnews/article/277/0005216679?sid=105'>아시아경제<\/a>","<a href='https://n.news.naver.com/mnews/article/277/0005216621?sid=101'>아시아경제<\/a>","<a href='https://n.news.naver.com/mnews/article/018/0005422884?sid=105'>이데일리<\/a>","<a href='https://n.news.naver.com/mnews/article/018/0005422832?sid=101'>이데일리<\/a>","<a href='https://n.news.naver.com/mnews/article/018/0005422949?sid=101'>이데일리<\/a>","<a href='https://n.news.naver.com/mnews/article/030/0003077823?sid=105'>전자신문<\/a>","<a href='https://n.news.naver.com/mnews/article/014/0004967649?sid=101'>파이낸셜뉴스<\/a>","<a href='https://n.news.naver.com/mnews/article/015/0004809379?sid=101'>한국경제<\/a>","<a href='https://n.news.naver.com/mnews/article/015/0004809363?sid=101'>한국경제<\/a>","<a href='https://n.news.naver.com/mnews/article/015/0004809408?sid=105'>한국경제<\/a>","<a href='https://n.news.naver.com/mnews/article/015/0004809397?sid=105'>한국경제<\/a>","<a href='https://n.news.naver.com/mnews/article/016/0002102507?sid=101'>헤럴드경제<\/a>","<a href='https://n.news.naver.com/mnews/article/215/0001082429?sid=105'>한국경제TV<\/a>","<a href='https://n.news.naver.com/mnews/article/658/0000032739?sid=102'>국제신문<\/a>","<a href='https://n.news.naver.com/mnews/article/658/0000032765?sid=105'>국제신문<\/a>","<a href='https://n.news.naver.com/mnews/article/088/0000798038?sid=101'>매일신문<\/a>","<a href='https://n.news.naver.com/mnews/article/586/0000052214?sid=102'>시사저널<\/a>","<a href='https://n.news.naver.com/mnews/article/053/0000034504?sid=105'>주간조선<\/a>","<a href='https://n.news.naver.com/mnews/article/366/0000876649?sid=101'>조선비즈<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064014?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/648/0000013766?sid=101'>비즈니스워치<\/a>","<a href='https://n.news.naver.com/mnews/article/031/0000727906?sid=105'>아이뉴스24<\/a>","<a href='https://n.news.naver.com/mnews/article/417/0000894695?sid=105'>머니S<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064021?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064022?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/353/0000044250?sid=102'>중앙SUNDAY<\/a>","<a href='https://n.news.naver.com/mnews/article/353/0000044249?sid=102'>중앙SUNDAY<\/a>","<a href='https://n.news.naver.com/mnews/article/138/0002142245?sid=105'>디지털데일리<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064018?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/629/0000200227?sid=105'>더팩트<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064015?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064016?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064023?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/243/0000039818?sid=101'>이코노미스트<\/a>","<a href='https://n.news.naver.com/mnews/article/648/0000013779?sid=101'>비즈니스워치<\/a>","<a href='https://n.news.naver.com/mnews/article/092/0002282336?sid=105'>ZDNet Korea<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064012?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/092/0002282374?sid=105'>ZDNet Korea<\/a>","<a href='https://n.news.naver.com/mnews/article/243/0000039821?sid=101'>이코노미스트<\/a>","<a href='https://n.news.naver.com/mnews/article/353/0000044223?sid=103'>중앙SUNDAY<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064013?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064011?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064019?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064020?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064017?sid=101'>한경비즈니스<\/a>","<a href='https://n.news.naver.com/mnews/article/050/0000064010?sid=101'>한경비즈니스<\/a>"],["빌 게이츠 “챗GPT는 인터넷만큼 중대한 발명…세상을 바꿀 것”","[창] 알파고 이후 7년","\"챗GPT는 '약장수'일 뿐, 목적은 진실 전달이 아니다\" [한판승부]","[노컷체크] 챗GPT로 팩트체크도 가능할까?","이준석 \"尹이 공천명단 하달? 천하람 거절, 김기현 넙죽\" [한판승부]","전세계는 지금 AI 전쟁…'챗GPT' 열풍에 너도나도 참전","빌 게이츠 “챗GPT 같은 AI가 세상 바꾼다”","생성형, 초거대, 멀티모달…챗GPT 등장으로 자주 듣게 되는 용어의 의미는?","216조원 날린 구글 vs 챗GPT 품은 MS…당신의 선택은?","빌 게이츠 “챗GPT 등장은 ‘중대 사건’…AI가 세상 바꿀 것”","AI법은 손도 못댄 정치권…'챗GPT' 끌고와 \"연설문 써달라\"","챗GPT가 던져준 글감 10가지…표절이면 어떡해?[ESC]","챗GPT에 허 찔린 구글, 20년 검색 천하 깨지나","'불붙은' MS·구글의 AI 검색 경쟁…웃고 있는 애플","빌 게이츠 \"챗GPT 같은 AI가 세상 바꿀 것…가장 중요한 혁신\"","'제2 챗GPT' 우리가 만든다…국내 스타트업 잇단 도전장","[챗GPT 쇼크①]'중꺾마' 알아?…'우주 강아지'도 그리는 AI","챗GPT 마법에 빠진 'AI 코인'…1000% 상승도","'더 빠른 대답을 원하시나요?'… 챗GPT플러스 한국 상륙","\"거짓도 진짜처럼\" 생성AI의 그림자…규제해야? 대안은","\"챗GPT, A키로 노래 하나 작곡해줘\"..일상 파고든 챗GPT","\"챗GPT, 결코 인간 수준 도달 못해\" 세계적 AI 석학 '일침'[PADO]","묻지도 않고 내가 쓴 리뷰·댓글도 '싹쓸이'…\"챗GPT, 악몽될 수도\"","챗GPT로 과제낸 학생, 'A+' 줘도 문제없다?…교육계는 지금","학원강의·유튜브까지 뜨거운 학습열기…\"챗GPT 어디까지 써봤니\"","\"챗GPT로 과제 냈더니 A+\"…대학가 'AI 대필' 어쩌나","\"망쳤다…발표 왜 했나\" AI 바드 공개 구글 후폭풍","빌 게이츠 \"챗GPT 같은 AI가 세상 바꿀 것\"","\"챗GPT 성공 자랑하지마\"…오픈AI CEO는 왜?[궁금한AI]","빌 게이츠 \"AI, 인터넷 발명과 같은 중대한 사건\"","빌 게이츠 \"챗GPT, 인터넷에 버금갈 발명…세상 바꿀 것\"","그 똑똑하다는 챗GPT와 끝말잇기 해봤습니다","빌 게이츠 \"챗GPT, 세상 바꾼다\"","\"삼성, 이제 감 잡은 듯\" 업계도 놀란 변화…'세계 1위' 꿈꾼다 [강경주의 IT카페]","2월 둘째 주, 한경 마켓PRO가 주목한 종목과 이슈는? [위클리 리뷰]","가상인간 로지·메이브 제작 AI 기술로 CCTV 만든다","빌 게이츠 \"챗GPT 같은 AI가 세상 바꾼다\"","집값 바닥 예측 어렵다던 챗GPT…서울 이곳은 추천했다 [부동산360]","빌 게이츠 \"챗GPT 등장 중대사건…AI가 세상 바꿀 것\"","“가덕신공항 2030엑스포?”…챗GPT에 물어봤더니","챗봇과 놀면서 영어공부...튜닙, AI 챗봇 이용한 챌린지 성료","빌 게이츠 \"챗GPT, 인터넷만큼 중요한 발명\"…일각선 가짜뉴스 등 재확산 우려","인간과 챗GPT의 경쟁은 이제 현실이 됐다 [최진순 기고]","챗GPT 등장으로 돈 벌 기회 잡은 애플","[세종풍향계] 요즘 사무관들이 챗GPT 쓰는 법…행안부도 ‘업무 매뉴얼’ 제작 중","\"AI, 1940년대 시작됐다고?\"…인공지능 역사 돌아보니[챗GPT의 모든 것]","\"문제 많다·부족하다\"…네이버·카카오, 챗GPT 상대 전략은","\"피싱 사이트 만들어줘\"…해커들에게 악용되는 챗GPT","'챗GPT' 유료 버전, 한국 상륙… \"월 2만5400원, 답변 시간 단축\"","'챗GPT'에 대한 10가지 질문, 챗GPT가 직접 답했다(2) [챗GPT의 모든 것]","'챗GPT'에 대한 10가지 질문, 챗GPT가 직접 답했다(3) [챗GPT의 모든 것]","[AI 예술 시대] “베끼기 귀재 된 AI의 표절·저작권 침해, 법적 책임은 사람 몫”","[AI 예술 시대] “챗GPT는 최첨단 표절시스템”…수퍼 지능 그늘도 짙다","[DD 퇴근길] “땡큐, 5G”…통신3사 영업이익 4조 돌파","[EDITOR's LETTER] 이번엔 챗GPT! 뭔 배워야 하는 게 이리 많은지...","[新 AI 혁명②] 구글·MS 14년 만에 '검색엔진 2차전' 돌입","‘챗GPT’에 대한 10가지 질문, 챗GPT가 직접 답했다(1)[챗GPT의 모든 것]","“끝났다”던 빅테크 주식, AI 열풍 타고 연초 수익률 고공 행진 [챗GPT의 모든 것]","“챗GPT 때문에 문과 망하는 거 아닌가요?”…'AI 대부' 의견은?[챗GPT의 모든 것]","구글 ‘코드레드’ 발동시킨 ‘챗GPT’에게 물었다  [허태윤 브랜드 스토리]","긴축 행보 다시 '안갯속'…갈피 못 잡는 미국증시","대화형 AI 검색엔진 경쟁 가열...美 이어 한·중·러 참전","배재경 업스테이지 리더 “‘생각에 대한 생각’하는 AI 등장”[챗GPT의 모든 것]","빌 게이츠 \"챗GPT, 가장 중요한 혁신…세상 바꿀 것\"","빌 게이츠 “챗GPT 같은 AI가 세상 바꾼다…인터넷 발명만큼 중대”","숙제·시험에 챗GPT 활용 늘어, 대학들 대응책 마련 부심","이정수 플리토 대표 “데이터의 개인화…언어의 힘 더 강력해질 것” [챗GPT의 모든 것]","챗GPT 따라잡아라…AI 개발 속도 내는 IT 거인들[챗GPT의 모든 것]","챗GPT 쇼크 – 모든 것을 알려주마[챗GPT의 모든 것]","챗GPT 수능 성적은…“영어 2등급, 수학은 낙제 수준” [챗GPT의 모든 것]","챗GPT, 어디까지 해봤니 [챗GPT의 모든 것]","챗GPT와 구글·네이버, 무엇이 다른가 [챗GPT의 모든 것]"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>언론사<\/th>\n      <th>제목<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"lengthMenu":[35,50,70],"language":{"lengthMenu":"표시 항목 수: _MENU_","search":"주제어 찾기"},"dom":"<\"top\"f>rt<\"bottom\"l<\"clear\">>ip","columnDefs":[],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<section id="참고사항" class="level3">
+<h3 class="anchored" data-anchor-id="참고사항">참고사항</h3>
+<ul>
+<li>연구개발 단계입니다.</li>
+<li>수집 기사 목록은 전체 기사량보다는 적습니다.</li>
+<li>(사단법인) <a href="https://r2bit.com/">한국 R 사용자회</a></li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
